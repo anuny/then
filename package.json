@@ -1,0 +1,27 @@
+{
+  "name": "h2e",
+  "version": "0.0.1",
+  "description": "html parse to element",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "h2e",
+	"html"
+  ],
+  "author": "Anuny",
+  "license": "MIT",
+  "fute": {
+    "port": 3000,
+    "watch": true,
+    "openBrowser": false,
+    "reloadBrowser": true,
+    "src": "src",
+    "dist": "dist",
+    "statics": "static",
+    "filter": "@",
+    "minifix": ".mini",
+    "ext": {
+	  "title":"test"
+	}
+  }
+}
