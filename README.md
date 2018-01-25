@@ -1,6 +1,7 @@
 # then
 promise polyfill
 
+## npm i -g fute
 
 ``` javascript
 var A = new then(function(resolve,reject){
