@@ -11,18 +11,21 @@ fute
 
 ``` javascript
 var A = new then(function(resolve,reject){
-	resolve('A OK!');
-	reject('A ERROR!');
+	setTimeout(function(){
+		resolve('A OK!');
+	},1000)	
+	//reject('A ERROR!');
 });
-
-
 var B = function(result){
 	console.log(result); //A then result2
 	return new then(function(resolve,reject){
-		resolve('B OK!');
+		setTimeout(function(){
+			resolve('B OK!');
+		},1000)
+		
 	}).then(function(result){
-		console.log(result); // B ERROR!
-		return 'then result'
+		console.log(result); // B OK!
+		return 'B then result'
 	})
 }
 
@@ -39,6 +42,6 @@ A.then(function(result){
 })
 .then(B)
 .then(function(result){
-	console.log(result) // B OK!
+	console.log(result) // B then result!
 });
 ```
