@@ -17,7 +17,31 @@
 </head>
 <body>
 <script>
+var a = new then(function(resolve,reject){
+	resolve('p 的结果');
+	reject('p 的结果');
+});
 
+
+a.then(function(result){
+	console.log('p的结果:' + result);
+	return 'p then方法第一次返回'
+},function(value){
+	console.log(value);
+	return 'p then方法第一次错误的返回'
+})
+.then(function(result){
+	console.log('p第一次then方法的返回：'+result);
+	return 'p then方法第二次返回'
+})
+.then(function(result){
+	return new then(function(resolve,reject){
+		resolve('p2');
+	})
+})
+.then(function(result){
+	console.log('p2的结果：' + result)
+});
 </script>
 </body>
 </html>

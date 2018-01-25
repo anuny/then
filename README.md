@@ -1,3 +1,2 @@
-# then 
-
-promise
+# then
+promise polyfill

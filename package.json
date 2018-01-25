@@ -1,12 +1,12 @@
 {
-  "name": "h2e",
+  "name": "then",
   "version": "0.0.1",
-  "description": "html parse to element",
+  "description": "promise",
   "main": "index.js",
   "scripts": {},
   "keywords": [
-    "h2e",
-	"html"
+    "promise",
+	"then"
   ],
   "author": "Anuny",
   "license": "MIT",
