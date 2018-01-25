@@ -13,18 +13,18 @@ var B = new then(function(resolve,reject){
 });
 
 A.then(function(result){
-	console.log('A的结果:' + result);
-	return 'A then方法第一次返回'
+	console.log('A result:' + result);
+	return 'A then result'
 },function(value){
 	console.log(value);
-	return 'A then方法第一次错误的返回'
+	return 'A then error'
 })
 .then(function(result){
-	console.log('A第一次then方法的返回：'+result);
-	return 'A then方法第二次返回'
+	console.log('A then result：'+result);
+	return 'A then _result'
 })
 .then(B)
 .then(function(result){
-	console.log('B的结果：' + result)
+	console.log('B result：' + result)
 });
 ```
